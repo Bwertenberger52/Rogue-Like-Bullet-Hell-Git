@@ -10,12 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
+    Vector2 knifeDir;
     // Update is called once per frame
     void Update()
     {
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        knifeDir.x = Input.GetAxis("Mouse X");
+        knifeDir.y = Input.GetAxis("Mouse Y");
+        
     }
 
     void FixedUpdate()
