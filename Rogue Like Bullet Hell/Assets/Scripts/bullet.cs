@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
     {
         if(!hasBounce)
         {
-            bounce.bounciness = change;
+            bounce.bounciness = 1f;
             hasBounce = true;
         }
         if (collision.collider.name.Contains("Player"))
@@ -31,7 +31,6 @@ public class bullet : MonoBehaviour
         }
         else if (collision.collider.name.Contains("Wall"))
         {
-            bounce.bounciness = 0;
             knife.bodyType = RigidbodyType2D.Static;
         }
 

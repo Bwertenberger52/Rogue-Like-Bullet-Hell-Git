@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5221433405476435204}
   - component: {fileID: -7435899465672752550}
   - component: {fileID: -5562812214564741515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,6 +136,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 12.16, y: 12.16}
+  m_Offset: {x: -0.38055897, y: 0.4904453}
+  m_Size: {x: 3.8076558, y: 9.217375}
   m_Direction: 0
