@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3340567306939674702}
   - component: {fileID: 6102970198540064940}
   - component: {fileID: 5221433405476435204}
-  - component: {fileID: 6046626278597463993}
-  - component: {fileID: -5495240044555557679}
+  - component: {fileID: -7435899465672752550}
+  - component: {fileID: -5562812214564741515}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -101,38 +101,12 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ad3b2c7255d4572468bf98e537c93e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6046626278597463993
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8066149880652558218}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.49845552, y: 0.49845695}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.16, y: 12.16}
-    newSize: {x: 12.16, y: 12.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.1846848, y: 10.166172}
-  m_EdgeRadius: 0
---- !u!114 &-5495240044555557679
+--- !u!114 &-7435899465672752550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,3 +118,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6b4485bd4b38442921bcf2da98ca8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knife: {fileID: 5221433405476435204}
+  bounce: {fileID: 6200000, guid: ad3b2c7255d4572468bf98e537c93e4d, type: 2}
+  player: {fileID: 5892488644629205643, guid: 7291b353f5d3baa438636a5889a1bf79, type: 3}
+  hitEffect: {fileID: 678429936850943756, guid: ef20c6a7e73a68343a578b60e945946c, type: 3}
+  change: 0.4
+--- !u!70 &-5562812214564741515
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066149880652558218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 12.16, y: 12.16}
+  m_Direction: 0
