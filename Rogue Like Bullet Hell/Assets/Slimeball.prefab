@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1402100877976044510}
   - component: {fileID: 4910379056783185766}
   - component: {fileID: 6431984686616911739}
+  - component: {fileID: -2533029453820741405}
   m_Layer: 3
   m_Name: Slimeball
   m_TagString: Untagged
@@ -115,9 +116,21 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008747697, y: 0}
   serializedVersion: 2
   m_Radius: 0.61701643
+--- !u!114 &-2533029453820741405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258844388072247600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba03a02744a0a8b4d972384f629d5e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

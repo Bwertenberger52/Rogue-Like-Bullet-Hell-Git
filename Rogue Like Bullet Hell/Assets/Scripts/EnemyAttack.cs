@@ -25,6 +25,10 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (actionTime <= Time.time)
         {
             wave();
@@ -43,6 +47,7 @@ public class EnemyAttack : MonoBehaviour
         shoot(firePoint7);
         shoot(firePoint8);
     }
+
     void shoot(Transform firePoint)
     {
 
@@ -55,7 +60,8 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.collider.name.Contains("knife"))
         {
-            Destroy(gameObject);
+
+            health -= 5;
         }
     }
 }
