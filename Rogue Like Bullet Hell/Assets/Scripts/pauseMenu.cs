@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -23,15 +24,22 @@ public class pauseMenu : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         pauseMenuUI.SetActive(false);
         GameIsPause = false;
+
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         GameIsPause = true;
+    }
+
+    public void QuitToMain()
+    {
+        SceneManager.LoadScene(0);
+        
     }
 }
