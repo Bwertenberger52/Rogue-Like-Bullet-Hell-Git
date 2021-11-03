@@ -15,12 +15,18 @@ public class EnemyAttack : MonoBehaviour
     public Transform firePoint7;
     public Transform firePoint8;
     public GameObject bulletPrefab;
-    private float waitTime = 5f;  //Wait 5 seconds after we do something to do something again
-    private float actionTime;  //The next time we do something
+    public Rigidbody2D playerPos;
+    
+    private float waitTimeLong = 5f;  //Wait 5 seconds after we do something to do something again
+    private float waitTimeShort = 2f;  //Wait 5 seconds after we do something to do something again
+    
+    private float actionTimeShort;  //The next time we do something
+    private float actionTimeLong;  //The next time we do something
 
     void Start()
     {
-        actionTime = Time.time + waitTime;
+        actionTimeShort = Time.time + waitTimeShort;
+        actionTimeLong = Time.time + waitTimeLong;
     }
     // Update is called once per frame
     void Update()
@@ -29,12 +35,39 @@ public class EnemyAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (actionTime <= Time.time)
+        if (actionTimeShort <= Time.time && gameObject.name.Contains("Waver"))
         {
             wave();
 
-            actionTime = Time.time + waitTime;
+            actionTimeShort = Time.time + waitTimeShort;
         }
+        else if (actionTimeShort <= Time.time && gameObject.name.Contains("Peashooter"))
+        {
+            pea();
+
+            actionTimeShort = Time.time + waitTimeShort;
+        }        
+        else if (actionTimeLong <= Time.time && gameObject.name.Contains("Sniper"))
+        {
+            snipe();
+
+            actionTimeLong = Time.time + waitTimeLong;
+        }
+
+    }
+
+    void pea()
+    {
+        shoot(firePoint3);
+    }
+
+    void snipe()
+    {
+        
+        Vector2 shootDir = playerPos.position - gameObject.GetComponent<Rigidbody2D>().position;
+        float angle = Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg;
+        gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0,0,angle + 90);
+        shoot(firePoint3);
     }
     void wave()
     {

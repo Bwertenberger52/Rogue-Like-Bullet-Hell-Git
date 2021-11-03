@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private float moveSpeed = 7f;
-    static float dashTime = 3f;
     public Rigidbody2D rb;
     public Camera cam; 
 
