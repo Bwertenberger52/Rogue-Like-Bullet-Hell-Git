@@ -35,6 +35,12 @@ public class EnemyAttack : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (gameObject.name.Contains("Sniper"))
+        {
+            Vector2 shootDir = playerPos.position - gameObject.GetComponent<Rigidbody2D>().position;
+            float angle = Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg;
+            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, angle + 90);
+        }
         if (actionTimeShort <= Time.time && gameObject.name.Contains("Waver"))
         {
             wave();
@@ -64,9 +70,7 @@ public class EnemyAttack : MonoBehaviour
     void snipe()
     {
         
-        Vector2 shootDir = playerPos.position - gameObject.GetComponent<Rigidbody2D>().position;
-        float angle = Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg;
-        gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0,0,angle + 90);
+        
         shoot(firePoint3);
     }
     void wave()

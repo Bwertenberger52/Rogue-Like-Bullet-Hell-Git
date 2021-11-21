@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5849508813136597287}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8550e9147da889c4aa25f5fcf45f4495, type: 3}
   m_Name: 
@@ -147,6 +147,7 @@ MonoBehaviour:
   firePoint7: {fileID: 0}
   firePoint8: {fileID: 0}
   bulletPrefab: {fileID: 1258844388072247600, guid: 72338e724c65b1645b0e68b271f4b7bf, type: 3}
+  playerPos: {fileID: 0}
 --- !u!95 &653343802866916963
 Animator:
   serializedVersion: 3
