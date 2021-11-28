@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public float health = 5f;
+    public float health = 3f;
     public float bulletForce = 20f;
     public Transform firePoint1;
     public Transform firePoint2;
@@ -99,6 +99,11 @@ public class EnemyAttack : MonoBehaviour
         {
 
             health -= 5;
+        }
+        if (collision.collider.name.Contains("shank"))
+        {
+
+            health -= 1;
         }
     }
 }

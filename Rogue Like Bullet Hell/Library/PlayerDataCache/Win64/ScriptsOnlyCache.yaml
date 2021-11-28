@@ -33,6 +33,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,7 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Scenes/Knife Demo.unity:
+    Assets/Scenes/Level 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -478,7 +484,7 @@ ScriptsOnlyBuild:
     className: Die
   - hash:
       serializedVersion: 2
-      Hash: 8a24ba66dba756735c6e46cb57ff443a
+      Hash: 73eccffdfe2329446c06819e23ec69ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: yeeting
@@ -965,6 +971,6 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
-  - Assets/Scenes/Knife Demo.unity
-  playerPath: C:/Users/goopy/Desktop/Unity Projects/Rogue Like Bullet Hell Git/Rogue
+  - Assets/Scenes/Level 1.unity
+  playerPath: C:/Users/goopy/Desktop/GitHub Repos/Rogue Like Bullet Hell Git/Rogue
     Like Bullet Hell/Builds/Rogue Like Bullet Hell.exe
